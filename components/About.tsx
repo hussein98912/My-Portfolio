@@ -10,48 +10,56 @@ import {
   BrainCircuit,
   Database,
   Globe2,
-  Server,
   Workflow,
 } from "lucide-react";
-
+import "./About.css";
 const focusAreas = [
   {
-    icon: Server,
+    icon: Database,
     number: "01",
     title: "Backend Development",
     description:
-      "Building REST APIs, authentication systems, business logic, integrations, and scalable backend services with Python and Django.",
+      "Building backend systems, REST APIs, authentication, business logic, database workflows, and real-time services for practical applications.",
     technologies: [
       "Python",
       "Django",
       "DRF",
       "PostgreSQL",
+      "JWT",
+      "Redis",
+      "WebSockets",
     ],
   },
   {
     icon: BrainCircuit,
     number: "02",
-    title: "AI & Intelligent Systems",
+    title: "AI & Machine Learning",
     description:
-      "Integrating machine learning models, LLMs, AI agents, and computer vision into practical software applications.",
+      "Developing and integrating machine learning, deep learning, LLM, and computer vision solutions into practical software products.",
     technologies: [
-      "OpenAI",
       "TensorFlow",
+      "Keras",
+      "OpenAI",
       "YOLO",
       "OpenCV",
+      "CNN",
+      "LSTM",
+      "BERT",
     ],
   },
   {
     icon: Workflow,
     number: "03",
-    title: "Automation & Integration",
+    title: "Automation & Integrations",
     description:
-      "Connecting APIs, business systems, AI services, and automated workflows to solve real-world operational problems.",
+      "Connecting APIs, AI services, business platforms, and automated workflows to build smarter systems and reduce repetitive processes.",
     technologies: [
       "n8n",
       "REST APIs",
-      "WebSockets",
+      "Webhooks",
       "Stripe",
+      "OpenAI",
+      "WebSockets",
     ],
   },
   {
@@ -59,11 +67,12 @@ const focusAreas = [
     number: "04",
     title: "Frontend Development",
     description:
-      "Developing responsive frontend interfaces and connecting them with backend APIs to build complete and functional web applications.",
+      "Developing responsive frontend interfaces and connecting them with backend APIs to build complete, functional web applications and product experiences.",
     technologies: [
       "React",
       "Next.js",
       "TypeScript",
+      "JavaScript",
       "Tailwind CSS",
     ],
   },
@@ -157,22 +166,16 @@ export default function Home() {
       <Navbar />
 
       <main>
-        {/* Hero */}
         <Hero />
 
-        {/* Experience */}
-        <Experience />
-
-        {/* Projects */}
         <Projects />
 
-        {/* =================================================
+        <Experience />
+
+        {/* =========================
             ABOUT
-        ================================================= */}
-        <section
-          id="about"
-          className="section about-section"
-        >
+        ========================= */}
+        <section id="about" className="section about-section">
           <div className="container">
 
             {/* Section Header */}
@@ -184,9 +187,9 @@ export default function Home() {
             <div className="about-intro">
               <div className="about-intro-heading">
                 <h2 className="about-title">
-                  Building software
+                  Backend, AI &
                   <br />
-                  <span>with purpose.</span>
+                  <span>building things end-to-end.</span>
                 </h2>
               </div>
 
@@ -196,18 +199,18 @@ export default function Home() {
                   <span className="about-highlight">
                     Hussein Salman
                   </span>
-                  , an Informatics Engineering graduate focused
-                  on backend development, AI, and intelligent
-                  automation, with practical experience working
-                  across the full stack.
+                  , an Informatics Engineering graduate focused on
+                  backend development, AI, and intelligent automation,
+                  with practical experience working across the full stack.
                 </p>
 
                 <p>
-                  I enjoy turning ideas and business requirements
-                  into practical software — from backend APIs
-                  and data-driven systems to AI-powered
-                  applications, responsive frontend interfaces,
-                  and automated workflows.
+                  I build backend systems and AI-powered applications,
+                  while also developing responsive frontend interfaces
+                  when projects require it. My experience includes REST APIs,
+                  machine learning and LLM integrations, React and Next.js
+                  development, database workflows, external service
+                  integrations, and automated workflows.
                 </p>
               </div>
             </div>
@@ -223,14 +226,11 @@ export default function Home() {
                     className="about-focus-card"
                   >
                     <div className="about-focus-top">
-                      <span className="about-focus-number">
-                        {item.number}
-                      </span>
 
                       <Icon
-                        size={20}
-                        strokeWidth={1.5}
                         className="about-focus-icon"
+                        size={21}
+                        strokeWidth={1.5}
                       />
                     </div>
 

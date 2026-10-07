@@ -1,0 +1,1146 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 130px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(88, 166, 255, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 75%,
+      rgba(168, 85, 247, 0.07),
+      transparent 28%
+    ),
+    var(--bg);
+}
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 15%;
+  right: -180px;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background: rgba(168, 85, 247, 0.07);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.about-section::after {
+  content: "";
+
+  position: absolute;
+
+  left: -180px;
+  bottom: 15%;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: rgba(59, 130, 246, 0.06);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.about-section > .container > .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--muted-2);
+}
+
+.about-section > .container > .section-label::before {
+  content: "";
+
+  width: 28px;
+  height: 1px;
+
+  background: currentColor;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.about-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(300px, 0.85fr);
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-top: 55px;
+  margin-bottom: 85px;
+}
+
+.about-intro-heading {
+  min-width: 0;
+}
+
+.about-title {
+  margin: 0;
+
+  max-width: 850px;
+
+  font-family: var(--font-space), sans-serif;
+
+  font-size: clamp(48px, 6.5vw, 86px);
+
+  line-height: 0.93;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+.about-title span {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.about-intro-text {
+  max-width: 500px;
+}
+
+.about-intro-text p {
+  margin: 0 0 22px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+.about-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-highlight {
+  color: rgba(255, 255, 255, 0.88);
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FOCUS GRID
+========================================================= */
+
+.about-focus-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   FOCUS CARD
+========================================================= */
+
+.about-focus-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 390px;
+
+  padding: 25px 22px 22px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-left-width: 2px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Accent colors */
+
+.about-focus-card:nth-child(1) {
+  --about-accent: #60a5fa;
+
+  border-left-color: #60a5fa;
+}
+
+.about-focus-card:nth-child(2) {
+  --about-accent: #a78bfa;
+
+  border-left-color: #a78bfa;
+}
+
+.about-focus-card:nth-child(3) {
+  --about-accent: #34d399;
+
+  border-left-color: #34d399;
+}
+
+.about-focus-card:nth-child(4) {
+  --about-accent: #f59e0b;
+
+  border-left-color: #f59e0b;
+}
+
+
+/* Soft inner accent */
+
+.about-focus-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      color-mix(
+        in srgb,
+        var(--about-accent) 10%,
+        transparent
+      ),
+      transparent 68%
+    );
+
+  filter: blur(15px);
+
+  opacity: 0.75;
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.about-focus-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--about-accent) 28%,
+      rgba(255, 255, 255, 0.09)
+    );
+
+  border-left-color: var(--about-accent);
+
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(
+        in srgb,
+        var(--about-accent) 4%,
+        rgba(255, 255, 255, 0.04)
+      ),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18),
+    0 0 28px
+      color-mix(
+        in srgb,
+        var(--about-accent) 6%,
+        transparent
+      );
+}
+
+
+/* =========================================================
+   FOCUS CARD TOP
+========================================================= */
+
+.about-focus-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+.about-focus-number {
+  color: rgba(255, 255, 255, 0.24);
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+.about-focus-icon {
+  color: var(--about-accent);
+
+  opacity: 0.9;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.about-focus-card:hover .about-focus-icon {
+  transform: translateY(-2px) rotate(-4deg);
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   FOCUS CONTENT
+========================================================= */
+
+.about-focus-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.about-focus-card h3 {
+  margin: 0 0 15px;
+
+  font-family: var(--font-space), sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.18;
+
+  letter-spacing: -0.025em;
+
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+.about-focus-card p {
+  margin: 0 0 26px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOCUS TECHNOLOGIES
+========================================================= */
+
+.about-focus-tech {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: auto;
+}
+
+.about-focus-tech span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 27px;
+
+  padding: 0 8px;
+
+  box-sizing: border-box;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--about-accent) 12%,
+      rgba(255, 255, 255, 0.08)
+    );
+
+  background:
+    color-mix(
+      in srgb,
+      var(--about-accent) 3%,
+      rgba(255, 255, 255, 0.018)
+    );
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-focus-card:hover .about-focus-tech span {
+  border-color:
+    color-mix(
+      in srgb,
+      var(--about-accent) 20%,
+      rgba(255, 255, 255, 0.08)
+    );
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.about-focus-tech span:hover {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--about-accent) 42%,
+      rgba(255, 255, 255, 0.1)
+    );
+
+  background:
+    color-mix(
+      in srgb,
+      var(--about-accent) 8%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+========================================================= */
+
+.about-stack {
+  margin-top: 105px;
+
+  padding-top: 55px;
+
+  border-top: 1px solid var(--border);
+}
+
+.about-stack-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 430px);
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.about-bottom-label {
+  display: block;
+
+  color: var(--muted-2);
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+.about-stack-header h3 {
+  margin: 14px 0 0;
+
+  font-family: var(--font-space), sans-serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.045em;
+
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+.about-stack-header h3 span {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.about-stack-header p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STACK GROUPS
+========================================================= */
+
+.about-stack-groups {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 70px;
+
+  row-gap: 18px;
+}
+
+
+/* Each stack group */
+
+.about-stack-group {
+  position: relative;
+
+  padding: 20px 0 22px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.about-stack-group::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 26px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Group title */
+
+.about-stack-group-title {
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* Stack list */
+
+.about-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.about-stack-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 31px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.018);
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.about-stack-list span:hover {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+
+  border-color: rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.about-bottom {
+  margin-top: 95px;
+}
+
+.about-bottom-line {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border);
+}
+
+.about-bottom-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding-top: 30px;
+}
+
+.about-bottom-content h3 {
+  margin: 13px 0 0;
+
+  font-family: var(--font-space), sans-serif;
+
+  font-size: clamp(30px, 3vw, 44px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.about-project-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease;
+}
+
+.about-project-link:hover {
+  color: #ffffff;
+}
+
+.about-project-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.about-project-link:hover .about-project-arrow {
+  transform: translate(2px, -2px);
+
+  border-color: rgba(96, 165, 250, 0.3);
+
+  background: rgba(96, 165, 250, 0.06);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .about-intro-text {
+    max-width: 650px;
+  }
+
+  .about-focus-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stack-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .about-stack-header p {
+    max-width: 650px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .about-section {
+    padding: 90px 0 85px;
+  }
+
+  .about-intro {
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    gap: 30px;
+  }
+
+  .about-title {
+    font-size: clamp(42px, 12vw, 64px);
+  }
+
+  .about-intro-text p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .about-focus-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .about-focus-card {
+    min-height: 0;
+
+    padding: 23px 20px 22px;
+  }
+
+  .about-focus-top {
+    margin-bottom: 38px;
+  }
+
+  .about-focus-card h3 {
+    font-size: 18px;
+  }
+
+  .about-focus-card p {
+    font-size: 11px;
+
+    line-height: 1.75;
+  }
+
+  .about-focus-tech {
+    gap: 5px;
+  }
+
+  .about-focus-tech span {
+    min-height: 25px;
+
+    padding: 0 7px;
+
+    font-size: 7px;
+  }
+
+
+  /* Stack */
+
+  .about-stack {
+    margin-top: 75px;
+
+    padding-top: 40px;
+  }
+
+  .about-stack-header {
+    margin-bottom: 38px;
+  }
+
+  .about-stack-header h3 {
+    font-size: 40px;
+  }
+
+  .about-stack-header p {
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+  .about-stack-groups {
+    grid-template-columns: 1fr;
+
+    row-gap: 0;
+  }
+
+  .about-stack-group {
+    padding: 20px 0;
+  }
+
+  .about-stack-list {
+    gap: 5px;
+  }
+
+  .about-stack-list span {
+    min-height: 31px;
+
+    padding: 0 9px;
+
+    font-size: 8px;
+  }
+
+
+  /* Bottom */
+
+  .about-bottom {
+    margin-top: 70px;
+  }
+
+  .about-bottom-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 27px;
+  }
+
+  .about-bottom-content h3 {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-focus-card {
+    padding: 21px 18px 20px;
+  }
+
+  .about-focus-top {
+    margin-bottom: 32px;
+  }
+
+  .about-focus-card h3 {
+    font-size: 17px;
+  }
+
+  .about-focus-tech span {
+    font-size: 6.5px;
+  }
+
+  .about-stack-header h3 {
+    font-size: 36px;
+  }
+
+  .about-bottom-content h3 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   ABOUT — TYPOGRAPHY IMPROVEMENT
+========================================================= */
+
+/* Main About title */
+.about-title {
+  font-size: clamp(52px, 6vw, 86px);
+  line-height: 0.95;
+}
+
+/* Intro text */
+.about-intro-text p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   FOCUS CARDS
+========================================================= */
+
+.about-focus-card h3 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.about-focus-card p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about-focus-tech span {
+  min-height: 29px;
+  padding: 0 9px;
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+========================================================= */
+
+.about-stack-header h3 {
+  font-size: clamp(44px, 4.5vw, 64px);
+  line-height: 0.95;
+  font-weight: 600;
+}
+
+.about-stack-header p {
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.about-stack-group-title {
+  margin-bottom: 17px;
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.about-stack-list {
+  gap: 8px;
+}
+
+.about-stack-list span {
+  min-height: 36px;
+
+  padding: 0 13px;
+
+  font-size: 11px;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================================
+   CURRENT FOCUS
+========================================================= */
+
+.about-bottom-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.about-bottom-content h3 {
+  font-size: clamp(34px, 3.2vw, 48px);
+  line-height: 1;
+  font-weight: 600;
+}
+
+.about-project-link {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .about-title {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+
+  .about-intro-text p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .about-focus-card h3 {
+    font-size: 19px;
+  }
+
+  .about-focus-card p {
+    font-size: 12px;
+  }
+
+  .about-focus-tech span {
+    min-height: 28px;
+    padding: 0 8px;
+    font-size: 8px;
+  }
+
+  .about-stack-header h3 {
+    font-size: 42px;
+  }
+
+  .about-stack-header p {
+    font-size: 12px;
+  }
+
+  .about-stack-group-title {
+    font-size: 9px;
+  }
+
+  .about-stack-list span {
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 9px;
+  }
+
+  .about-bottom-content h3 {
+    font-size: 32px;
+  }
+
+  .about-project-link {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 43px;
+  }
+
+  .about-focus-card h3 {
+    font-size: 18px;
+  }
+
+  .about-focus-card p {
+    font-size: 11px;
+  }
+
+  .about-stack-header h3 {
+    font-size: 37px;
+  }
+
+  .about-stack-list span {
+    min-height: 32px;
+    padding: 0 9px;
+    font-size: 8px;
+  }
+
+  .about-bottom-content h3 {
+    font-size: 29px;
+  }
+}

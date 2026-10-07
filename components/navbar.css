@@ -1,0 +1,191 @@
+/* =========================================================
+   NAVBAR (FULL WIDTH)
+========================================================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0; /* إلغاء البادينغ الخارجي لتحديد العرض الكامل */
+  pointer-events: none;
+}
+
+.navbar-inner {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 100%; /* امتداد على كامل عرض الشاشة */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px;
+  padding: 0 40px; /* مسافة داخلية من اليمين واليسار للمحتوى */
+
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* خط سفلي ناعم فقط */
+  border-radius: 0; /* إلغاء الزوايا الدائرية */
+  
+  background: rgba(11, 13, 16, 0.75);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-family: var(--font-space), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo-text span {
+  color: #38bdf8;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  height: 36px;
+  padding: 0 14px;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.nav-links > a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-links > a[aria-label="GitHub"],
+.nav-links > a[aria-label="LinkedIn"] {
+  width: 36px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-links > a[aria-label="GitHub"]:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-links > a[aria-label="LinkedIn"]:hover {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.nav-contact {
+  margin-left: 10px;
+
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 8px !important;
+
+  color: #ffffff !important;
+
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.12),
+    rgba(139, 92, 246, 0.08)
+  ) !important;
+
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.08);
+}
+
+.nav-contact:hover {
+  border-color: rgba(56, 189, 248, 0.5) !important;
+
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.2),
+    rgba(139, 92, 246, 0.14)
+  ) !important;
+
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+.nav-contact svg {
+  transition: transform 0.2s ease;
+}
+
+.nav-contact:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    height: 56px;
+    padding: 0 20px;
+  }
+}
