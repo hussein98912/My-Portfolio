@@ -16,7 +16,6 @@ const heroCards = [
   {
     className: "hero-card-backend",
     icon: ServerCog,
-    label: "BACKEND",
     title: "Backend Development",
     items: ["Python", "Django", "DRF", "PostgreSQL"],
     accent: "blue",
@@ -24,23 +23,20 @@ const heroCards = [
   {
     className: "hero-card-ai",
     icon: BrainCircuit,
-    label: "AI SYSTEMS",
-    title: "AI & Automation",
+    title: "AI Systems",
     items: ["OpenAI", "AI Agents", "n8n", "Computer Vision"],
     accent: "purple",
   },
   {
     className: "hero-card-microsoft",
     icon: PanelsTopLeft,
-    label: "MICROSOFT",
-    title: "Power Platform",
+    title: "Microsoft Development",
     items: ["Power Apps", "Power Automate", "Dataverse", "SharePoint"],
     accent: "green",
   },
   {
     className: "hero-card-frontend",
     icon: LayoutDashboard,
-    label: "FRONTEND",
     title: "Frontend Development",
     items: ["React", "Next.js", "TypeScript", "Tailwind"],
     accent: "orange",
@@ -50,6 +46,7 @@ const heroCards = [
 export default function Hero() {
   return (
     <section className="hero-modern" id="home">
+      {/* BACKGROUND */}
       <div className="hero-modern-grid" />
       <div className="hero-modern-noise" />
 
@@ -57,6 +54,7 @@ export default function Hero() {
       <div className="hero-modern-glow hero-glow-right" />
 
       <div className="container hero-modern-container">
+
         {/* MAIN VISUAL */}
         <div className="hero-modern-main">
           {/* FLOATING CARDS */}
@@ -76,14 +74,10 @@ export default function Hero() {
                     <Icon size={17} strokeWidth={1.5} />
                   </div>
 
-                  <span className="hero-side-card-label">
-                    {card.label}
-                  </span>
+                  <h3 className="hero-side-card-title">
+                    {card.title}
+                  </h3>
                 </div>
-
-                <h3 className="hero-side-card-title">
-                  {card.title}
-                </h3>
 
                 <div className="hero-side-card-stack">
                   {card.items.map((item) => (
@@ -96,16 +90,18 @@ export default function Hero() {
 
           {/* CENTRAL VISUAL */}
           <div className="hero-visual">
+            {/* ORBITS */}
             <div className="hero-orbit hero-orbit-outer" />
             <div className="hero-orbit hero-orbit-middle" />
             <div className="hero-orbit hero-orbit-inner" />
 
+            {/* ORBIT DOTS */}
             <div className="hero-orbit-dot hero-dot-one" />
             <div className="hero-orbit-dot hero-dot-two" />
             <div className="hero-orbit-dot hero-dot-three" />
             <div className="hero-orbit-dot hero-dot-four" />
 
-            {/* Portrait */}
+            {/* PORTRAIT */}
             <div className="hero-portrait-frame">
               <div className="hero-portrait-grid" />
 
@@ -124,7 +120,7 @@ export default function Hero() {
               <div className="hero-portrait-accent hero-accent-purple" />
             </div>
 
-            {/* Small decorative markers */}
+            {/* DECORATIVE MARKERS */}
             <div className="hero-cross hero-cross-one">+</div>
             <div className="hero-cross hero-cross-two">+</div>
           </div>
@@ -137,7 +133,7 @@ export default function Hero() {
 
             <h1>
               Hussein
-              <span>Salman.</span>
+              <span>Salman</span>
             </h1>
 
             <div className="hero-name-meta">
@@ -161,7 +157,7 @@ export default function Hero() {
 
             <h2>
               Backend systems,
-              <span>AI & automation.</span>
+              <span>AI &amp; automation.</span>
             </h2>
 
             <div className="hero-actions">
@@ -216,7 +212,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* BOTTOM */}
+        {/* BOTTOM META */}
         <div className="hero-modern-bottom">
           <div className="hero-meta hero-meta-blue">
             <span className="hero-meta-line" />
