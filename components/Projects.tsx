@@ -570,7 +570,10 @@ export default function Projects() {
       <section id="projects" className="projects section">
         <div className="container">
           {/* HEADER */}
-          <div className="section-label">Selected work</div>
+          <div className="section-label">
+        <span className="section-label-line" aria-hidden="true" />
+        <span>Projects</span>
+      </div>
 
           <div className="projects-header">
             <div>
@@ -661,16 +664,6 @@ export default function Projects() {
                 </article>
               );
             })}
-          </div>
-
-          <div className="projects-gallery-footer">
-            <span>
-              {projects.length.toString().padStart(2, "0")} PROJECTS
-            </span>
-
-            <span>
-              BACKEND · AI · AUTOMATION · COMPUTER VISION
-            </span>
           </div>
         </div>
       </section>

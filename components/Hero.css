@@ -1850,3 +1850,332 @@
     transition: none;
   }
 }
+
+/* =========================================================
+   HERO MODERN
+   Unified Contact / Global Background
+========================================================= */
+
+.hero-modern {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 50px 0 45px;
+
+  /* نفس هوية Contact */
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(96, 165, 250, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 90%,
+      rgba(168, 85, 247, 0.05),
+      transparent 28%
+    ),
+    var(--bg);
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================================================
+   CINEMATIC PORTRAIT
+========================================================= */
+
+.hero-portrait-frame {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+
+  width: 360px;
+  height: 500px;
+
+  transform: translateX(-50%);
+  isolation: isolate;
+  overflow: visible;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Soft blue / purple atmosphere behind the portrait */
+
+.hero-portrait-glow {
+  position: absolute;
+  inset: 8% -12% -4%;
+  z-index: -1;
+
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse at 25% 35%,
+      rgba(56, 189, 248, 0.19),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 78% 60%,
+      rgba(139, 92, 246, 0.2),
+      transparent 45%
+    );
+
+  filter: blur(42px);
+  opacity: 0.85;
+
+  pointer-events: none;
+}
+
+/* Image container */
+
+.hero-portrait-image {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  background: #101318;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0, 0, 0, 0.92) 84%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    rgba(0, 0, 0, 0.92) 84%,
+    transparent 100%
+  );
+}
+
+/* Portrait treatment */
+
+.hero-portrait {
+  object-fit: cover;
+  object-position: center 30%;
+
+  filter:
+    grayscale(0.12)
+    contrast(1.08)
+    brightness(0.94)
+    saturate(0.88);
+
+  transform: scale(1.015);
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.8s ease;
+}
+
+/* Subtle cinematic hover */
+
+.hero-portrait-frame:hover .hero-portrait {
+  transform: scale(1.055);
+
+  filter:
+    grayscale(0)
+    contrast(1.06)
+    brightness(1)
+    saturate(1.04);
+}
+
+/* Fine technical grid */
+
+.hero-portrait-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  pointer-events: none;
+  opacity: 0.13;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 25%,
+    black 70%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 25%,
+    black 70%,
+    transparent 100%
+  );
+}
+
+/* Cinematic lighting and bottom fade */
+
+.hero-portrait-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      rgba(56, 189, 248, 0.09),
+      transparent 35%,
+      transparent 68%,
+      rgba(139, 92, 246, 0.12)
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5, 8, 15, 0.04) 45%,
+      rgba(5, 8, 15, 0.18) 65%,
+      rgba(5, 8, 15, 0.8) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 48%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+}
+
+/* Moving light line */
+
+.hero-portrait-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56, 189, 248, 0.7),
+    rgba(255, 255, 255, 0.75),
+    rgba(167, 139, 250, 0.7),
+    transparent
+  );
+
+  opacity: 0.55;
+  pointer-events: none;
+
+  animation: portrait-light-sweep 7s ease-in-out infinite;
+}
+
+/* Minimal luminous accents */
+
+.hero-portrait-accent {
+  position: absolute;
+  z-index: 5;
+
+  width: 62px;
+  height: 2px;
+
+  pointer-events: none;
+}
+
+.hero-accent-blue {
+  top: 20px;
+  left: -12px;
+
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.7),
+    0 0 32px rgba(56, 189, 248, 0.22);
+}
+
+.hero-accent-purple {
+  right: -12px;
+  bottom: 78px;
+
+  background: #a78bfa;
+
+  box-shadow:
+    0 0 12px rgba(167, 139, 250, 0.7),
+    0 0 32px rgba(167, 139, 250, 0.22);
+}
+
+/* Editorial corner markers */
+
+.hero-portrait-corner {
+  position: absolute;
+  z-index: 5;
+
+  width: 19px;
+  height: 19px;
+
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.hero-corner-tl {
+  top: 9px;
+  left: -9px;
+
+  border-top: 1px solid rgba(56, 189, 248, 0.8);
+  border-left: 1px solid rgba(56, 189, 248, 0.8);
+}
+
+.hero-corner-br {
+  right: -9px;
+  bottom: 66px;
+
+  border-right: 1px solid rgba(167, 139, 250, 0.8);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.8);
+}
+
+@keyframes portrait-light-sweep {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translateY(490px);
+    opacity: 0.7;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait-scanline {
+    animation: none;
+  }
+
+  .hero-portrait,
+  .hero-portrait-frame {
+    transition: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-portrait-scanline {
+    animation-duration: 6s;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-portrait-accent {
+    width: 42px;
+  }
+}

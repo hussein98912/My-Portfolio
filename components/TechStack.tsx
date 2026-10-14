@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
   BrainCircuit,
   Database,
@@ -93,50 +94,45 @@ const stacks = [
 
 export default function TechStack() {
   return (
-    <section id="skills" className="tech-stack-section">
+    <section
+      id="stack"
+      className="tech-stack-section"
+    >
       <div className="container tech-stack-container">
 
-        {/* Header */}
+        {/* =================================================
+            HEADER
+        ================================================= */}
         <div className="tech-stack-header">
+
           <div>
             <div className="section-label tech-stack-label">
               <span className="label-line" />
               TECH STACK
             </div>
 
-            <h2
-              className="
-                tech-stack-title
-                mt-5
-                font-[var(--font-space)]
-                text-5xl
-                font-semibold
-                leading-[0.95]
-                tracking-[-0.055em]
-                text-white
-                sm:text-6xl
-                lg:text-7xl
-              "
-            >
+            <h2 className="tech-stack-title">
               Tools I use to
-              <span className="block text-white/30">
-                build.
-              </span>
+              <span>build.</span>
             </h2>
           </div>
 
           <div className="tech-stack-intro">
-            <p className="text-sm leading-7 text-white/60">
+            <p>
               A practical stack built through professional,
               academic, and personal projects across backend,
               AI, automation, Microsoft platforms, and modern
               web development.
             </p>
           </div>
+
         </div>
 
-        {/* Grid */}
+        {/* =================================================
+            STACK GRID
+        ================================================= */}
         <div className="tech-stack-grid">
+
           {stacks.map((stack, index) => {
             const Icon = stack.icon;
 
@@ -166,6 +162,7 @@ export default function TechStack() {
 
                 {/* Card Header */}
                 <div className="tech-stack-card-top">
+
                   <div className="tech-stack-icon">
                     <Icon
                       size={19}
@@ -173,47 +170,37 @@ export default function TechStack() {
                     />
                   </div>
 
-                  <span
-                    className="
-                      tech-stack-category
-                      font-[var(--font-space)]
-                      text-base
-                      font-semibold
-                      tracking-[-0.015em]
-                      text-white
-                    "
-                  >
+                  <span className="tech-stack-category">
                     {stack.category}
                   </span>
+
                 </div>
 
                 {/* Technologies */}
                 <div className="tech-stack-items">
+
                   {stack.items.map((item) => (
-                    <span
-                      key={item}
-                      className="
-                        min-h-[35px]
-                        px-3
-                        text-[10px]
-                        font-medium
-                        text-white/60
-                      "
-                    >
+                    <span key={item}>
                       {item}
                     </span>
                   ))}
+
                 </div>
               </motion.article>
             );
           })}
+
         </div>
 
-        {/* Footer */}
+        {/* =================================================
+            FOOTER
+        ================================================= */}
         <div className="tech-stack-footer">
+
           <div className="tech-stack-footer-line" />
 
           <div className="tech-stack-footer-content">
+
             <span>
               PYTHON · DJANGO · AI · AUTOMATION · MICROSOFT · WEB
             </span>
@@ -222,8 +209,11 @@ export default function TechStack() {
               <span />
               CONTINUOUSLY LEARNING
             </span>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

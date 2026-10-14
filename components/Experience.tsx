@@ -87,10 +87,10 @@ export default function Experience() {
         {/* Header */}
         <div className="experience-header">
           <div>
-            <div className="section-label experience-label">
-              <span className="label-line" />
-              EXPERIENCE
-            </div>
+     <div className="section-label experience-label">
+  <span className="experience-label-line" aria-hidden="true" />
+  <span>EXPERIENCE</span>
+</div>
 
             <h2 className="experience-title">
               Experience

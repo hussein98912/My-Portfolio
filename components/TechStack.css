@@ -720,3 +720,29 @@
     font-size: 7px;
   }
 }
+
+/* TECH STACK — BLUE / PURPLE GRADIENT LABEL LINE */
+
+.tech-stack-section .tech-stack-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tech-stack-section .tech-stack-label .label-line {
+  display: inline-block;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(96, 165, 250, 0.7),
+    rgba(168, 85, 247, 0.4)
+  );
+}
+
+/* Prevent an extra line from an existing pseudo-element */
+.tech-stack-section .tech-stack-label::before {
+  content: none !important;
+  display: none !important;
+}

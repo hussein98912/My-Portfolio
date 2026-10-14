@@ -101,24 +101,33 @@ export default function Hero() {
             <div className="hero-orbit-dot hero-dot-three" />
             <div className="hero-orbit-dot hero-dot-four" />
 
-            {/* PORTRAIT */}
-            <div className="hero-portrait-frame">
-              <div className="hero-portrait-grid" />
 
-              <Image
-                src="/Image.jpg"
-                alt="Hussein Salman — Backend & AI Developer"
-                fill
-                priority
-                className="hero-portrait"
-                sizes="(max-width: 768px) 82vw, 560px"
-              />
+        {/* PORTRAIT */}
+        <div className="hero-portrait-frame">
+          <div className="hero-portrait-glow" />
 
-              <div className="hero-portrait-vignette" />
+          <div className="hero-portrait-image">
+            <Image
+              src="/Image.jpg"
+              alt="Hussein Salman — Backend & AI Developer"
+              fill
+              priority
+              className="hero-portrait"
+              sizes="(max-width: 768px) 82vw, 560px"
+            />
+          </div>
 
-              <div className="hero-portrait-accent hero-accent-blue" />
-              <div className="hero-portrait-accent hero-accent-purple" />
-            </div>
+          <div className="hero-portrait-grid" />
+          <div className="hero-portrait-vignette" />
+
+
+          <div className="hero-portrait-accent hero-accent-blue" />
+          <div className="hero-portrait-accent hero-accent-purple" />
+
+          <div className="hero-portrait-corner hero-corner-tl" />
+          <div className="hero-portrait-corner hero-corner-br" />
+        </div>
+
 
             {/* DECORATIVE MARKERS */}
             <div className="hero-cross hero-cross-one">+</div>
