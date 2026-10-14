@@ -5447,3 +5447,132 @@ display: none !important;
     font-size: 10px !important;
   }
 }
+
+/* ========================================
+   MOBILE PROJECT MODAL — FULL CONTENT
+======================================== */
+
+@media (max-width: 768px) {
+  .project-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    box-sizing: border-box;
+  }
+
+  .project-modal-inner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    min-height: 0;
+    max-height: none !important;
+    margin: auto 0;
+    overflow: visible !important;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  .project-modal-image {
+    height: 210px;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+
+  .project-modal-content {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0;
+    overflow: visible !important;
+    padding: 24px 18px;
+    box-sizing: border-box;
+  }
+
+  .project-modal-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .project-modal-description,
+  .project-modal-implementation,
+  .project-modal-features-section,
+  .project-modal-stack-section {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-modal {
+    padding: 8px;
+  }
+
+  .project-modal-image {
+    height: 170px;
+  }
+
+  .project-modal-content {
+    padding: 20px 14px;
+  }
+
+  .project-modal-heading h2 {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .gallery-open {
+    animation: view-soft-pulse 2.4s ease-in-out infinite !important;
+  }
+
+  @keyframes view-soft-pulse {
+    0%, 100% {
+      box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.10),
+        0 0 0 0 rgba(210, 215, 222, 0),
+        inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+      box-shadow:
+        0 5px 17px rgba(0, 0, 0, 0.14),
+        0 0 0 4px rgba(210, 215, 222, 0.2),
+        inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #projects .gallery-open {
+    animation: none !important;
+  }
+}
+/* Remove excessive space between Experience and Projects */
+#experience.experience-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 30px !important;
+}
+
+#projects.projects {
+  margin-top: 0 !important;
+  padding-top: 30px !important;
+}

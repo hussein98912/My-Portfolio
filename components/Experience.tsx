@@ -200,9 +200,6 @@ export default function Experience() {
           <div className="experience-footer-line" />
 
           <div className="experience-footer-content">
-            <span>
-              BACKEND · AI · AUTOMATION · SOFTWARE DEVELOPMENT
-            </span>
 
             <span className="experience-footer-status">
               <span />

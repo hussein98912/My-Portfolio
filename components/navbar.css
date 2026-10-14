@@ -841,3 +841,66 @@ body.nav-menu-open {
   position: static;
   transform: none;
 }
+
+/* =========================================================
+   MOBILE SIDEBAR — COMPACT SIDE PANEL
+========================================================= */
+
+@media (max-width: 900px) {
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+
+    width: min(340px, 82vw);
+    max-width: 340px;
+    height: 100vh;
+    height: 100dvh;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px 0 0 16px;
+
+    transform: translateX(102%);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0.32s ease;
+  }
+
+  .mobile-sidebar.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 190;
+
+    background: rgba(3, 5, 9, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 420px) {
+  .mobile-sidebar {
+    width: min(310px, 86vw);
+    max-width: 310px;
+    border-radius: 14px 0 0 14px;
+  }
+
+  .mobile-sidebar-header {
+    padding: 0 20px;
+  }
+
+  .mobile-sidebar-content {
+    padding: 28px 20px 20px;
+  }
+}
