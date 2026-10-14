@@ -592,9 +592,6 @@ export default function Projects() {
               </p>
 
               <div className="projects-meta">
-                <span className="projects-count">
-                  {projects.length.toString().padStart(2, "0")} — PROJECTS
-                </span>
 
                 <span className="projects-scroll-hint">
                   SCROLL TO EXPLORE

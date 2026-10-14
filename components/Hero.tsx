@@ -159,7 +159,6 @@ export default function Hero() {
         <div className="hero-modern-intro">
           <div className="hero-intro-heading">
             <div className="hero-intro-number">
-              <span>01</span>
               <span className="intro-line" />
               <span>CURRENTLY FOCUSED ON</span>
             </div>

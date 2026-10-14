@@ -175,9 +175,6 @@ export default function Navbar() {
                 onClick={close}
                 style={{ "--item-index": index } as React.CSSProperties}
               >
-                <span className="mobile-nav-number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
 
                 <span className="mobile-nav-text">{item.label}</span>
 
@@ -210,7 +207,7 @@ export default function Navbar() {
               })}
             </div>
 
-            <p>Backend · AI · Automation</p>
+            <p>Backend · AI · Automation · Frontend</p>
           </div>
         </div>
       </aside>

@@ -1537,3 +1537,467 @@
   ) !important;
 }
 
+/* =========================================================
+   SMALL MOBILE OPTIMIZATION
+   Phones: 380px and below
+========================================================= */
+
+@media (max-width: 480px) {
+  /* Main section */
+  .projects {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: clip;
+  }
+
+  .projects .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    box-sizing: border-box;
+  }
+
+  /* Section label */
+  .projects .section-label {
+    gap: 9px !important;
+    margin-bottom: 22px;
+    font-size: 9px;
+    letter-spacing: 0.13em;
+  }
+
+  .projects .section-label::before {
+    width: 28px !important;
+    min-width: 28px !important;
+  }
+
+  /* Header */
+  .projects-header {
+    gap: 22px;
+    margin-bottom: 34px;
+  }
+
+  .projects-header h2 {
+    font-size: clamp(42px, 12vw, 54px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    overflow-wrap: anywhere;
+  }
+
+  .projects-intro {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .projects-intro p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .projects-meta {
+    margin-top: 18px;
+    gap: 12px;
+  }
+
+  .projects-count,
+  .projects-scroll-hint {
+    font-size: 8px;
+  }
+
+  /* Project list */
+  .projects-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    width: 100%;
+  }
+
+  .gallery-project,
+  .gallery-project-featured {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Image */
+  .gallery-image-wrap,
+  .gallery-project-featured .gallery-image-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 3px;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-image.project-image-contain {
+    object-fit: contain;
+    padding: 14px;
+  }
+
+  /* Image labels */
+  .gallery-top {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .gallery-category {
+    max-width: calc(100% - 46px);
+    min-width: 0;
+    gap: 5px;
+    padding: 7px 8px;
+    font-size: 7px;
+    letter-spacing: 0.015em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .gallery-category svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .gallery-open {
+    top: 10px;
+    right: 10px;
+    gap: 4px;
+    padding: 7px;
+    font-size: 7px;
+  }
+
+  .gallery-open svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Project title */
+  .gallery-bottom {
+    left: 13px;
+    right: 13px;
+    bottom: 13px;
+  }
+
+  .gallery-label {
+    margin-bottom: 6px;
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+
+  .gallery-bottom h3 {
+    max-width: 100%;
+    font-size: clamp(21px, 6.5vw, 27px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+  }
+
+  /* Caption */
+  .gallery-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 11px;
+    padding-top: 13px;
+  }
+
+  .gallery-caption > span {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .gallery-caption p {
+    font-size: 11px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+
+  /* =====================================================
+     PROJECT DETAILS MODAL
+  ===================================================== */
+
+  .project-modal {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .project-modal-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 4px auto;
+    border-radius: 4px;
+    overflow: clip;
+  }
+
+  .project-modal-close {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Modal image */
+  .project-modal-image {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-modal-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .project-modal-image img.project-image-contain {
+    object-fit: contain;
+    padding: 24px 14px;
+  }
+
+  .project-modal-category {
+    left: 10px;
+    right: 54px;
+    bottom: 10px;
+    width: fit-content;
+    max-width: calc(100% - 64px);
+    min-width: 0;
+    gap: 6px;
+    padding: 7px 9px;
+    font-size: 7px;
+    line-height: 1.5;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .project-modal-category svg {
+    flex-shrink: 0;
+  }
+
+  /* Modal content */
+  .project-modal-content {
+    padding: 25px 16px 24px;
+    min-width: 0;
+  }
+
+  .project-modal-content::before {
+    width: 38px;
+    margin-bottom: 20px;
+  }
+
+  .project-modal-heading span {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .project-modal-heading h2 {
+    font-size: clamp(27px, 8vw, 36px);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    overflow-wrap: anywhere;
+  }
+
+  /* Overview and role */
+  .project-modal-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+
+  .project-modal-description,
+  .project-modal-implementation,
+  .project-modal-features-section,
+  .project-modal-stack-section {
+    min-width: 0;
+  }
+
+  .project-modal-description .modal-label,
+  .project-modal-implementation > .modal-label,
+  .project-modal-features-section > .modal-label,
+  .project-modal-stack-section > .modal-label {
+    margin-bottom: 12px;
+    font-size: 8px;
+  }
+
+  .project-modal-description p {
+    font-size: 12px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+  }
+
+  /* Implementation and features */
+  .project-modal-implementation,
+  .project-modal-features-section,
+  .project-modal-stack-section {
+    margin-top: 28px;
+    padding-top: 22px;
+  }
+
+  .modal-feature-list,
+  .modal-feature-list-compact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin-top: 12px;
+  }
+
+  .modal-feature {
+    grid-template-columns: 27px minmax(0, 1fr);
+    gap: 8px;
+    padding: 12px 0;
+    min-width: 0;
+  }
+
+  .modal-feature > span {
+    font-size: 8px;
+  }
+
+  .modal-feature p {
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+
+  /* Technologies */
+  .project-modal-stack {
+    gap: 7px;
+    margin-top: 13px;
+  }
+
+  .project-modal-stack span {
+    max-width: 100%;
+    min-height: 29px;
+    padding: 0 9px;
+    font-size: 8px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Action buttons */
+  .project-modal-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+
+  .modal-action {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    gap: 9px;
+    padding: 0 12px;
+    font-size: 9px;
+  }
+
+  .modal-action span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Reduce distracting motion on small devices */
+  .ambient-orbit,
+  .ambient-beam,
+  .ambient-particles {
+    animation: none !important;
+  }
+
+  .ambient-glow {
+    filter: blur(70px);
+    opacity: 0.2;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 360px) {
+  .projects .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .projects-header h2 {
+    font-size: 40px;
+  }
+
+  .projects-gallery {
+    gap: 30px;
+  }
+
+  .gallery-image-wrap,
+  .gallery-project-featured .gallery-image-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-category {
+    max-width: calc(100% - 40px);
+    padding: 6px;
+    font-size: 6px;
+  }
+
+  .gallery-open {
+    padding: 6px;
+  }
+
+  .gallery-bottom h3 {
+    font-size: 21px;
+  }
+
+  .project-modal-content {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .project-modal-heading h2 {
+    font-size: 27px;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 780px) and (orientation: landscape) {
+  .project-modal {
+    align-items: flex-start;
+  }
+
+  .project-modal-image {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-project:hover .gallery-image-wrap,
+  .gallery-project:hover .gallery-image {
+    transform: none;
+  }
+}
+
+/* Hide project labels and text overlays on mobile only */
+@media (max-width: 640px) {
+  .gallery-top,
+  .gallery-bottom,
+  .gallery-category,
+  .gallery-open {
+    display: none !important;
+  }
+}
+
